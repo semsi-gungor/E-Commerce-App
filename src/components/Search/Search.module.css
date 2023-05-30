@@ -1,0 +1,45 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgb(245, 245, 245);
+}
+
+.backIcon {
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.slideIn {
+  animation: slide-in 400ms ease-in;
+}
+
+.slideOut {
+  animation: slide-out 420ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}

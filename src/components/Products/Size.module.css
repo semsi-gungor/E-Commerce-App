@@ -1,0 +1,36 @@
+.sizeContainer {
+  width: 1rem;
+  height: 1rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  font-size: 1em;
+}
+
+.avaliable {
+  color: rgb(65, 65, 65);
+  cursor: pointer;
+}
+
+.notAvaliable {
+  color: rgb(194, 194, 194);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.notAvaliable::after {
+  content: '';
+  position: absolute;
+  width: 1.2rem;
+  height: 1px;
+  background-color: rgba(83, 83, 83, 0.212);
+  top: 50%;
+  left: 0;
+  transform: rotate(-60deg);
+}
+
+.avaliable:hover {
+  font-weight: 500;
+  color: black;
+}

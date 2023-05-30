@@ -1,0 +1,40 @@
+.categories {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+
+.categoryItems {
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: all 0.1s ease-in-out;
+}
+
+.categoryItems p {
+  cursor: pointer;
+  padding: 0.4rem 0.5rem;
+}
+
+.categoryItems.active {
+  font-weight: 500;
+}
+
+.categoryItems::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  display: block;
+
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.categoryItems.active:after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.price {
+  color: rgb(43, 43, 43);
+}
+
+.title {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}

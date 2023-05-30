@@ -1,0 +1,17 @@
+.container {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.color {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 1px solid rgb(92, 92, 92);
+}
+
+.color:hover {
+  border: 3px solid rgba(0, 0, 0, 0.644);
+}

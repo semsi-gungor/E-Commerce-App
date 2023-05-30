@@ -1,0 +1,124 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 100;
+}
+
+.menu {
+  background-color: white;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.slideIn {
+  animation: slide-in 300ms forwards;
+}
+
+.slideOut {
+  animation: slide-out 300ms forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+.shadow {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.684);
+  animation: appear 300ms forwards;
+}
+
+.appear {
+  animation: appear 300ms forwards;
+}
+
+.disappear {
+  animation: disappear 300ms forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+.xIcon {
+  font-size: 2rem;
+  padding: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    flex: 5;
+  }
+  .shadow {
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .menu {
+    flex: 2;
+  }
+  .shadow {
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    flex: 1;
+  }
+  .shadow {
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu {
+    flex: 1;
+  }
+  .shadow {
+    flex: 2;
+  }
+}

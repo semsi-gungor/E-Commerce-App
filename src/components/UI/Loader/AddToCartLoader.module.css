@@ -1,0 +1,35 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bar {
+  width: 8px;
+  height: 50px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.first {
+  animation: loading 1500ms infinite;
+}
+.second {
+  animation: loading 1500ms 250ms infinite;
+}
+.third {
+  animation: loading 1500ms 500ms infinite;
+}
+
+@keyframes loading {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 30px;
+  }
+  100% {
+    height: 50px;
+  }
+}

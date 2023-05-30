@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.placeHolder {
+  position: absolute;
+  pointer-events: none;
+  color: rgb(179, 179, 179);
+  font-size: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.container input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.7rem 0;
+}
+
+.container input:focus {
+  outline: 0;
+}
+
+.container input:focus ~ .placeHolder,
+.container input:valid ~ .placeHolder {
+  transform: translateY(-1.5rem);
+  font-size: 10px;
+}
+
+.container p {
+  position: absolute;
+  bottom: 15px;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.container input:focus ~ p,
+.container input:valid ~ p {
+  opacity: 1;
+}
+
+.container p span {
+  margin-left: 5px;
+}
+
+.invalidInput {
+  border-color: rgb(255, 73, 73) !important;
+}
+
+.invalid {
+  color: rgb(255, 73, 73) !important;
+  opacity: 1 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    position: relative;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container p {
+    bottom: 5px;
+    font-size: 11px;
+  }
+}

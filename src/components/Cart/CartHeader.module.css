@@ -1,0 +1,60 @@
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  border: 2px solid black;
+  padding: 0.5rem 0.8rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.heart {
+  display: grid;
+  place-items: center;
+}
+
+.rightHeader:hover .heart {
+  color: rgb(185, 0, 31);
+}
+
+.xIcon {
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .leftHeader {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .leftHeader {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .leftHeader {
+    font-size: 1.5rem;
+  }
+}

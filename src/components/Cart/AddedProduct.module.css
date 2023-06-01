@@ -1,0 +1,84 @@
+.container {
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 0.8fr 0.8fr;
+
+  animation: slide-in 300ms forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.productHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.size {
+  font-size: 0.8rem;
+}
+
+.productHeader p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checked {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.close {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.productBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imgContainer {
+  background-size: cover;
+  background-position: center;
+}
+
+.checkoutButton {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+}
+
+.cartButton {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: rgb(66, 66, 66);
+}

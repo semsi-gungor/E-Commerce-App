@@ -10,12 +10,12 @@ const uiSlice = createSlice({
   reducers: {
     showAddedProduct(state) {
       state.showAddedProduct = true;
-      setTimeout(() => {
-        state.showAddedProduct = false;
-      }, 2000);
+    },
+    hideAddedProduct(state) {
+      state.showAddedProduct = false;
     },
   },
 });
 
-export const uiAcitons = uiSlice.actions;
+export const uiActions = uiSlice.actions;
 export default uiSlice.reducer;

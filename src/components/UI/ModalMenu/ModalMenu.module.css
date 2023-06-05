@@ -1,0 +1,129 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.menu {
+  background-color: white;
+  position: relative;
+}
+
+.slideInLeft {
+  animation: slide-in-left 300ms forwards;
+}
+
+.slideOutLeft {
+  animation: slide-out-left 300ms forwards;
+}
+
+.slideInRight {
+  animation: slide-in-left 300ms forwards;
+}
+
+.slideOutRight {
+  animation: slide-out-left 300ms forwards;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+.shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.684);
+  animation: appear 300ms forwards;
+  z-index: -1;
+}
+
+.appear {
+  animation: appear 300ms forwards;
+}
+
+.disappear {
+  animation: disappear 300ms forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .menu {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu {
+    width: 30%;
+  }
+}

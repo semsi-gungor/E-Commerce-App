@@ -34,15 +34,15 @@ export default function Sizes() {
     setSizes(temp);
   }
 
-  console.log(sizes);
-
   return (
     <div className={classes.container}>
       {sizes.map((size, index) => {
         return (
           <button
             key={index}
-            className={`${size.active ? classes.activeSize : classes.passive}`}
+            className={`${classes.sizeButton} ${
+              size.active ? classes.activeSize : classes.passive
+            }`}
             onClick={setActiveHandler.bind(null, size.title)}
           >
             {size.title}

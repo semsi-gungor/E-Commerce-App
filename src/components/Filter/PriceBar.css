@@ -1,0 +1,13 @@
+.MuiSlider-thumb {
+  color: rgb(0, 0, 0);
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.MuiSlider-rail {
+  color: rgb(175, 175, 175);
+  height: 3px;
+}
+.MuiSlider-track {
+  color: rgb(0, 0, 0);
+  height: 3px;
+}

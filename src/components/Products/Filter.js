@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classes from './Filter.module.css';
 import { BsFilterRight } from 'react-icons/bs';
 
-export default function Filter() {
+export default function Filter({ onClick }) {
   const [display, setDisplay] = useState(true);
 
   return (
@@ -32,7 +32,7 @@ export default function Filter() {
       </div>
       <div className={classes.filter}>
         <span>Filtreler</span>
-        <BsFilterRight />
+        <BsFilterRight onClick={onClick} />
       </div>
     </div>
   );

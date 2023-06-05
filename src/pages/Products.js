@@ -3,9 +3,13 @@ import Product from '../components/Products/Product';
 import ScrollUpButton from '../components/UI/ScrollUp/ScrollUpButton';
 import classes from './Products.module.css';
 import Filter from '../components/Products/Filter';
+import FilterSection from '../components/Filter/FilterSection';
+import useDelayedAnimation from '../hooks/use-delayed-unmount';
 
 function Products() {
   const [products, setProducts] = useState([]);
+  const [filterIsMounted, filterIsAnimating, toggleFilter] =
+    useDelayedAnimation(310);
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -22,7 +26,14 @@ function Products() {
 
   return (
     <>
-      <Filter />
+      <Filter onClick={toggleFilter} />
+      {filterIsMounted && (
+        <FilterSection
+          toggle={toggleFilter}
+          isAnimating={filterIsAnimating}
+          direction={'right'}
+        />
+      )}
       <div className={classes.container}>
         <ScrollUpButton />
         {products.map((product, index) => {

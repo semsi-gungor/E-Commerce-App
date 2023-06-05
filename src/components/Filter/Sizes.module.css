@@ -1,0 +1,26 @@
+.container {
+  height: 5rem;
+  width: 25rem;
+  padding: 1rem;
+  border: 1px solid black;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container button {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.container button:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.activeSize {
+  background-color: rgb(23, 23, 23) !important;
+  color: white;
+}

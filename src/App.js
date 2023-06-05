@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
-import ProductsPage from "./pages/Products";
-import UserPage from "./pages/User";
-import HomePage from "./pages/Home";
-import FavoritesPage from "./pages/Favorites";
-import CheckOutPage from "./pages/Checkout";
+import React, { useEffect } from 'react';
+import ProductsPage from './pages/Products';
+import UserPage from './pages/User';
+import HomePage from './pages/Home';
+import FavoritesPage from './pages/Favorites';
+import CheckOutPage from './pages/Checkout';
 import ProductDetailsPage, {
   loader as productDetailsLoader,
-} from "./pages/ProductDetails";
-import "./style.css";
+} from './pages/ProductDetails';
+import './style.css';
 
-import { getCart, sendCart, cartAcitons } from "./store/cart-slice";
-import { getFavorites, sendFavorites } from "./store/favorites-slice";
-import { useDispatch, useSelector } from "react-redux";
+import { getCart, sendCart, cartAcitons } from './store/cart-slice';
+import { getFavorites, sendFavorites } from './store/favorites-slice';
+import { useDispatch, useSelector } from 'react-redux';
 
-import RootLayout from "./pages/Root";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from './pages/Root';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 let initialCart = true;
 let initialFavorites = true;
@@ -56,7 +56,7 @@ export default function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <RootLayout />,
       children: [
         {
@@ -64,29 +64,29 @@ export default function App() {
           element: <HomePage />,
         },
         {
-          path: ":productType",
+          path: ':productType',
           children: [
             {
               index: true,
               element: <ProductsPage />,
             },
             {
-              path: ":productId",
+              path: ':productId',
               element: <ProductDetailsPage />,
               loader: productDetailsLoader,
             },
           ],
         },
         {
-          path: "favorites",
+          path: 'favorites',
           element: <FavoritesPage />,
         },
         {
-          path: "userpage",
+          path: 'userpage',
           element: <UserPage />,
         },
         {
-          path: "checkout",
+          path: 'checkout',
           element: <CheckOutPage />,
         },
       ],

@@ -16,7 +16,10 @@ export default function ModalMenu({ onClose, animate, direction, children }) {
   return (
     <div className={classes.container}>
       <div className={classes.shadow} onClick={onClose}></div>
-      <div className={`${classes.menu} ${animate ? slideOut : slideIn}`}>
+      <div
+        className={`${classes.menu} ${animate ? slideOut : slideIn}`}
+        style={{ right: direction === 'right' ? '0' : '' }}
+      >
         {children}
       </div>
     </div>

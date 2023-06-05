@@ -9,7 +9,11 @@
 
 .menu {
   background-color: white;
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  height: 100vh;
 }
 
 .slideInLeft {
@@ -21,11 +25,11 @@
 }
 
 .slideInRight {
-  animation: slide-in-left 300ms forwards;
+  animation: slide-in-right 300ms forwards;
 }
 
 .slideOutRight {
-  animation: slide-out-left 300ms forwards;
+  animation: slide-out-right 300ms forwards;
 }
 
 @keyframes slide-in-left {

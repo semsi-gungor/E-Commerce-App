@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import classes from './PriceBar.module.css';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import './PriceBar.css';
@@ -16,19 +15,17 @@ export default function PriceBar({ maxValue }) {
   };
 
   return (
-    <div className={classes.container}>
-      <Box sx={{ width: 300 }}>
-        <Slider
-          getAriaLabel={() => 'Price range'}
-          min={0}
-          max={2000}
-          step={100}
-          value={value}
-          onChange={handleChange}
-          valueLabelDisplay="auto"
-          getAriaValueText={valuetext}
-        />
-      </Box>
-    </div>
+    <Box sx={{ width: 300 }}>
+      <Slider
+        getAriaLabel={() => 'Price range'}
+        min={0}
+        max={2000}
+        step={100}
+        value={value}
+        onChange={handleChange}
+        valueLabelDisplay="auto"
+        getAriaValueText={valuetext}
+      />
+    </Box>
   );
 }

@@ -12,24 +12,6 @@ export default function HomePage() {
   return (
     <div className={classes.container}>
       <Slider />
-      <button
-        onClick={() => {
-          dispatch(uiActions.showAddedProduct());
-          setTimeout(() => {
-            dispatch(uiActions.hideAddedProduct());
-          }, 2000);
-        }}
-      >
-        Toggle
-      </button>
-      {showAddedProduct && (
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          tempore facere nisi, minima nihil obcaecati nobis cum omnis nulla qui
-          aspernatur accusamus, fugit explicabo? Quas vel amet at mollitia
-          quisquam?
-        </div>
-      )}
     </div>
   );
 }

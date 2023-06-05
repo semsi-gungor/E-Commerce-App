@@ -13,7 +13,10 @@ export default function FilterSection({
   return (
     <ModalMenu onClose={toggle} animate={isAnimating} direction={direction}>
       <div className={classes.container}>
-        <Sizes maxValue="2000" />
+        <Sizes />
+        <div className={classes.priceBar}>
+          <PriceBar maxValue="2000" />
+        </div>
       </div>
     </ModalMenu>
   );
